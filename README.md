@@ -10,6 +10,7 @@ PB 掲示板
 ・daisyUI
 ・Socket.io
 ・NextAuth
+・Prisma
 
 ## 環境構築メモ
 
@@ -44,6 +45,14 @@ PB 掲示板
 #### daisyUI をインストール
 
 `yarn add daisyui@latest`
+
+#### NextAuth をインストール
+
+`yarn add next-auth`
+`yarn add nodemailer sqlite3 prisma @prisma/client @next-auth/prisma-adapter`
+
+[参考](https://zenn.dev/fehde/articles/4be665551fd0d9)
+[参考](https://zenn.dev/shimabukuromeg/scraps/51ea9b884fc607)
 
 ---
 
