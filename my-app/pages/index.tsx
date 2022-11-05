@@ -1,25 +1,24 @@
 import type { NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import Card from "../components/UI/Card";
+import UserInput from "../components/UserInput/UserInput";
 
 const Home: NextPage = () => {
-  const { data: session, status } = useSession();
+  const router = useRouter();
+  const context = useContext(AppContext);
 
-  if (status === "authenticated") {
-    return (
-      <div>
-        <p>Signed in as {session.user!.email}</p>
-        <p>Expires: {session.expires}</p>
-        <button onClick={() => signOut()}>Sign out</button>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <p>Not signed in</p>
-        <button onClick={() => signIn()}>Sign in</button>
-      </div>
-    );
-  }
+  const onSubmit = (username: string, roomName: string) => {
+    router.push({ pathname: `/chat/${roomName}`, query: { username }} );
+  };
+
+  return (
+    <>
+      <Card>
+        <h2>Chat App</h2>
+      </Card>
+      <UserInput onSubmit={onSubmit} />
+    </>
+  );
 };
 
 export default Home;
