@@ -8,6 +8,8 @@ PB 掲示板
 ・TypeScript
 ・TailwindCSS
 ・daisyUI
+・Socket.io
+・NextAuth
 
 ## 環境構築メモ
 
