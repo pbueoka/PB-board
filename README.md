@@ -2,6 +2,12 @@
 
 PB 掲示板
 
+## 開発方式
+
+実践ドメイン駆動設計（DDD）
+[参考：DDD 概要](https://note.com/shift_tech/n/n1e91c68b1473)
+[参考：DDD 実践](https://qiita.com/APPLE4869/items/d210ddc2cb1bfeea9338)
+
 ## 技術要素
 
 ・Next.js（[& Vercel を利用](https://vercel.com/)）
